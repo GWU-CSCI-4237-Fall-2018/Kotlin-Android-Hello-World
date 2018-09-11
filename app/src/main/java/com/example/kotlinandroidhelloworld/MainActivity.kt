@@ -9,7 +9,7 @@ import android.widget.TextView
  */
 class MainActivity : AppCompatActivity() {
 
-     public override fun onCreate(savedInstanceState: Bundle?) {
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
