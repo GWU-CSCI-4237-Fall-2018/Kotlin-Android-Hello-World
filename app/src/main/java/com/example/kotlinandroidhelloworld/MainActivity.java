@@ -1,24 +1,35 @@
-package com.example.kotlinandroidhelloworld;
+package com.example.kotlinandroidhelloworld
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 
 /**
  * Let's convert this class to Kotlin as an example!
  */
-public class MainActivity extends AppCompatActivity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//public class MainActivity extends AppCompatActivity
+//public (default), private, internal
+class MainActivity : AppCompatActivity() {
 
-        updateText("We need to update this code to Kotlin!");
-    }
+@Override
+public override fun onCreate(savedInstanceState: Bundle) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-    private void updateText(String newText) {
-        TextView textView = findViewById(R.id.textview);
-        textView.setText(newText);
-    }
-}
+        updateText("This code has been updated to Kotlin!")
+        }
+
+private fun updateText(newText: String) {
+        val textView = findViewById(R.id.textview)
+        textView.setText(newText)
+        }
+        }
+
+//Notes
+//Mutability == are you allowed to change the value
+//var vs val
+//Lists are immutable by default (can't add to it)
+//ex val listOfString: List<String> = listOf(...whatever...)
+//ex val mutableListOfString: MutableList<String> = mutableListOf(...whatever...)
+//mutableListOfString.add("d")
